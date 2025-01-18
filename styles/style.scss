@@ -1,0 +1,18 @@
+@import "mixins";
+@import 'fonts';
+@import "min";
+
+@import "general";
+
+
+@import "header";
+@import "breadcrumbs";
+@import "showrooms";
+@import "showroom";
+@import "advantages";
+@import "banner";
+@import "footer";
+
+.container{
+    @include container;
+}

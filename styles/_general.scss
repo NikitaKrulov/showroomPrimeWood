@@ -1,0 +1,43 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 700;
+
+    color: #282828;
+
+    letter-spacing: 0%;
+}
+
+p,
+a,
+select {
+    font-family: "Proxima Nova", sans-serif;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 55px;
+    border-radius: 16px;
+    background: rgb(85, 210, 135);
+
+    color: rgb(255, 255, 255);
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+
+body {
+    position: relative;
+}
+
+section {
+  margin-bottom: 160px;
+}
