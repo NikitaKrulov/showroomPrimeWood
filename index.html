@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Шоу-рум</title>
+    <title>Шоурум</title>
 </head>
 
 <body>
@@ -51,7 +52,7 @@
                             офисного пространства в наших шоурумах</p>
                     </div>
                     <div class="showrooms__map">
-
+                        <div class="showrooms__map-yandex" id="map"></div>
                     </div>
                 </div>
                 <div class="showrooms__list">
@@ -232,22 +233,158 @@
                 </div>
         </section>
         <section class="banner">
-           <div class="container">
-            <div class="banner__wrapper">
-                <h2>Записаться в шоурум</h2>
-                <form action="#" class="banner__form">
-                    <input type="text" placeholder="Имя*">
-                    <div class="banner__inputFlex">
-                        <input type="tel" name="" id="" placeholder="+7 (999) 999-99-99">
-                        <input type="email" name="" id="" placeholder="Электронная почта">
+            <div class="container">
+                <div class="banner__wrapper">
+                    <div class="banner__content">
+                        <h2>Записаться в шоурум</h2>
+                        <form action="#" class="banner__form">
+                            <input type="text" placeholder="Имя*">
+                            <div class="banner__form-inputFlex">
+                                <input type="tel" name="" id="" placeholder="+7 (999) 999-99-99">
+                                <input type="email" name="" id="" placeholder="Электронная почта">
+                            </div>
+                            <button class="btn banner__form-btn">Отправить</button>
+                        </form>
+                        <p>Нажимая на кнопку, вы подтверждаете свое согласие на обработку персональных данных.</p>
                     </div>
-                    <button class="btn">Отправить</button>
-                </form>
-                <p>Нажимая на кнопку, вы подтверждаете свое согласие на обработку персональных данных.</p>
+                </div>
             </div>
-           </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__row">
+
+                    <ul class="footer__col">
+                        <li class="footer__col-title">Каталог</li>
+                        <li><a href="#">Мебель для персонала</a></li>
+                        <li><a href="#">Кабинеты руководителей</a></li>
+                        <li><a href="#">Кресла и стулья</a></li>
+                        <li><a href="#">Переговорные столы</a></li>
+                        <li><a href="#">Офисные диваны</a></li>
+                        <li><a href="#">Домашний офис</a></li>
+                        <li><a href="#">Ресепшены</a></li>
+                        <li><a href="#">Металлическая мебель</a></li>
+                    </ul>
+                    <div class="footer__col">
+                        <p class="footer__col-title">Услуги и сервисы</p>
+                        <div class="footer__row footer__row--services">
+                            <ul class="footer__col">
+                                <li><a href="#">Дизайн-проект офиса</a></li>
+                                <li><a href="#">Мебель на заказ</a></li>
+                                <li><a href="#">Для гос.структур</a></li>
+                                <li><a href="#">Тест драйв мебели</a></li>
+                                <li><a href="#">Презентационное оборудование</a></li>
+                                <li><a href="#">Реконфигурация офиса</a></li>
+                                <li><a href="#">Проектный менеджмент</a></li>
+                                <li><a href="#">Дизайнерам и архитекторам</a></li>
+                                <li><a href="#">Дистрибьюция</a></li>
+                            </ul>
+
+                            <ul class="footer__col">
+                                <li><a href="#">Доставка и сборка</a></li>
+                                <li><a href="#">Проектный менеджмент</a></li>
+                                <li><a href="#">Премиум из Китая</a></li>
+                                <li><a href="#">Офисное оборудование</a></li>
+                                <li><a href="#">Trade in старой мебели</a></li>
+                                <li><a href="#">Релокация офиса</a></li>
+                                <li><a href="#">Европейские фабрики</a></li>
+                                <li><a href="#">Брокерам, риелторам, застройщикам</a></li>
+                                <li><a href="#">Архитектурное бюро</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <ul class="footer__col">
+                        <li class="footer__col-title">О компании</li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Наша команда</a></li>
+                        <li><a href="#">Наши проекты</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Партерам</a></li>
+                        <li><a href="#">Шоурумы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+
+                    <div class="footer__col footer__col--info">
+                        <div class="footer__col-city">
+                            <p class="footer__col-title">Ваш город</p>
+                            <a href="#"><img src="./img/arrow.svg" alt="arrow">Москва</a>
+                        </div>
+
+                        <div class="footer__col-contacts">
+                            <p class="footer__col-title">Контакты</p>
+                            <div class="footer__col-contactsLink">
+                                <a href="tel:+7 (495) 120-53-91"><img src="./img/tel.svg" alt="tel">+7 (495)
+                                    120-53-91</a>
+                                <a href="mailto:info@prime-wood.ru"><img src="./img/mail.svg"
+                                        alt="mail">info@prime-wood.ru</a>
+                                <a href="#"><img src="./img/WhatsApp.svg" alt="WhatsApp">Написать в WatsApp</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__col-sub">
+                            <p class="footer__col-title">Подписывайтесь</p>
+                            <div class="footer__col-subLink">
+                                <a href=""><img src="./img/tg.svg" alt="tg"></a>
+                                <a href=""><img src="./img/vk.svg" alt="vk"></a>
+                                <a href=""><img src="./img/dzen.svg" alt="dzen"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__bottom-col">
+                        <p>© 2013–2024 Компания «Prime Wood» - офисная мебель г. Москва.</p>
+                        <p> Все права защищены, нарушения авторских прав будут преследоваться по закону.</p>
+                    </div>
+                    <div class="footer__bottom-col">
+                        <img src="./img/yandex.png" alt="yandex">
+                        <p>Рейтинг организации на Яндексе</p>
+                    </div>
+                </div>
+                <p class="footer__terms">Вы принимаете <a href="#">условия политики в отношении обработки персональных
+                        данных</a> и <a href="#">пользовательского соглашения</a> каждый раз, когда оставляете свои
+                    данные в любой форме обратной связи на сайте</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [55.731274, 37.593856],
+                zoom: 12, 
+                controls: [] 
+            });
+
+            var addresses = [
+                { coords: [55.708353, 37.652731], hint: 'г. Москва, ул. Ленинская Слобода, д.26' },
+                { coords: [55.749792, 37.541889], hint: 'г. Москва, Пресненская набережная, 6с2, Башня Империя, 50 этаж' },
+                { coords: [55.711209, 37.655314], hint: 'г. Москва, 1-я улица Машиностроения, 10' }
+            ];
+
+            addresses.forEach(function (address) {
+                var myPlacemark = new ymaps.Placemark(address.coords, {
+                    hintContent: address.hint,
+                    balloonContent: address.hint
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: './img/Subtract.svg',
+                    iconImageSize: [100, 100],
+                    iconImageOffset: [-10, -10] 
+                });
+
+                myMap.geoObjects.add(myPlacemark);
+            });
+            
+
+        }
+    </script>
 </body>
 
 </html>

@@ -1,9 +1,8 @@
 @import "mixins";
-@import 'fonts';
+@import "fonts";
 @import "min";
 
 @import "general";
-
 
 @import "header";
 @import "breadcrumbs";
@@ -13,6 +12,6 @@
 @import "banner";
 @import "footer";
 
-.container{
+.container {
     @include container;
 }
